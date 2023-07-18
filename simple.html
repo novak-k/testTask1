@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple document</title>
+</head>
+<body>
+  <p id="numberColored"></p>
+  <form action="#" method="post" name="form">
+    <label for="number">Add your number here</label>
+    <input type="number" id="number" name="number" oninput="onInputChange()">
+    <br>
+    <!-- <input type="submit" value="Submit" key="num23" id="submit"> -->
+    <button 
+      type="submit" 
+      id="submit"
+      key="num23"
+      disabled
+    >
+      Set
+    </button>
+
+    <button
+      type="reset"
+      id="reset"
+    >
+    Clear
+    </button>
+  </form>
+
+  <script>
+
+    function onInputChange() {
+      let number = document.querySelector('#number').value;
+      console.log(number);
+
+      if (number.length > 0) {
+        document.querySelector('#submit').removeAttribute("disabled");
+      }
+
+      const numberColored = document.querySelector('#numberColored');
+      numberColored.innerText = document.querySelector('#number').value;
+      
+      if (numberColored.innerText % 2 === 0) {
+        numberColored.setAttribute("style", "background-color: green;")
+      } else if (numberColored.innerText % 2 !== 0){
+        numberColored.setAttribute("style", "background-color: red;")
+      }
+    }
+
+    document.querySelector('form').onsubmit = function(e) {
+      e.preventDefault();
+      let number = document.querySelector('#number').value;
+      localStorage.setItem("num23", number);
+      console.log(localStorage);
+    }
+
+    document.querySelector('#reset').onclick = function() {
+      localStorage.removeItem("number", number);
+      document.querySelector('#submit').setAttribute("disabled", true);
+      console.log(localStorage);
+    }
+
+  </script>
+<script src="task1.js"></script>
+</body>
+</html>
+
+<!-- 2 Create simple HTML form with text field and buttons “Set” and “Clear”. 
+On submit form set item to local storage with key “num23” and value from the text field. 
+On click “Clear” button clean up text field and delete item “num23” from local storage.
+On page load get item “num23” from local storage, create paragraph element, set according value into paragraph, and insert it before form.Paint paragraph in red if item value is odd and in green if item value is even.
+
+Text field should accept only numbers.
+Form should not be submitted if the field value is empty.
+Disable “Set” button if the field value is empty. -->
+
+
