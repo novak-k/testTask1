@@ -1,0 +1,109 @@
+:root {
+  --gray: #313237;
+  --white: #FFFFFF;
+}
+
+.dataItemWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+
+  border: solid 2px darkgray;
+  background-color: whitesmoke;
+  color: var(--gray);
+
+  font-family: 'Montserrat', sans-serif;
+
+  width: 280px;
+  height: 500px;
+
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0 0 20px 20px;
+}
+
+.dataItemPhoto{
+  width: 200px;
+}
+
+.dataItemName{
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+.dataItemPrice{
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.dataItemDescription{
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+
+  color: var(--gray);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.dataItemScreen{
+  display: flex;
+  justify-content: space-between;
+}
+
+.dataItemCapacity{
+  display: flex;
+  justify-content: space-between;
+}
+
+.dataItemRam{
+  display: flex;
+  justify-content: space-between;
+}
+
+.dataItemSpan{
+ color:#89939A;
+}
+
+.dataItemBtnWrapper{
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.dataItemBtn{
+  width: 170px;
+  height: 40px;
+  border: none;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+
+  background-color: var(--gray);
+  color: var(--white);
+
+  cursor: pointer;
+  padding: 0;
+}
+
+.dataItemBtnHeart{
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--white);
+  color: var(--gray);
+
+  border: 1px solid #B4BDC3;
+  cursor: pointer;
+  padding: 0;
+}

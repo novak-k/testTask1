@@ -1,0 +1,4 @@
+.dataTable {
+  display: flex;
+  flex-wrap: wrap;
+}
