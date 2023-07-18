@@ -1,3 +1,8 @@
+:root {
+  --gray: #313237;
+  --white: #FFFFFF;
+}
+
 .dataItemWrapper {
   display: flex;
   flex-direction: column;
@@ -7,7 +12,7 @@
 
   border: solid 2px darkgray;
   background-color: whitesmoke;
-  color:#313237;
+  color: var(--gray);
 
   font-family: 'Montserrat', sans-serif;
 
@@ -40,7 +45,7 @@
   line-height: 15px;
   font-weight: 600;
 
-  color:#313237;
+  color: var(--gray);
 
   display: flex;
   flex-direction: column;
@@ -84,8 +89,8 @@
   line-height: 21px;
   font-weight: 600;
 
-  background-color: #313237;
-  color: #FFFFFF;
+  background-color: var(--gray);
+  color: var(--white);
 
   cursor: pointer;
   padding: 0;
@@ -95,8 +100,8 @@
   width: 40px;
   height: 40px;
 
-  background-color: FFFFFF;
-  color: #313237;
+  background-color: var(--white);
+  color: var(--gray);
 
   border: 1px solid #B4BDC3;
   cursor: pointer;

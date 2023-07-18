@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import 'bulma';
-// import '@fortawesom/@fontawesom-free/css/all.css';
 
 import './resetCss.css';
 import './App.css';

@@ -12,7 +12,12 @@ const {name, price, screen, capacity, ram, image} = dataItem;
       <p className="dataItemName">{name}</p>
       <p className="dataItemPrice">$ {price}</p>
       <div className="dataItemDescription">
-        <div className="dataItemScreen"><span className="dataItemSpan">Screen</span> {screen}</div>
+        <div className="dataItemScreen">
+          <span className="dataItemSpan">
+            Screen
+          </span> 
+          {screen}
+        </div>
         <div className="dataItemCapacity"><span className="dataItemSpan">Capacity</span> {capacity}</div>
         <div className="dataItemRam"><span className="dataItemSpan">RAM</span> {ram}</div>
       </div>
